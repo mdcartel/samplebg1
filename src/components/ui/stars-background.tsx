@@ -1,6 +1,6 @@
 'use client';
 import * as React from "react";
-import { type HTMLMotionProps, motion, type SpringOptions, type Variants } from "framer-motion";
+import { type HTMLMotionProps, motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface StarsBackgroundProps extends HTMLMotionProps<"div"> {

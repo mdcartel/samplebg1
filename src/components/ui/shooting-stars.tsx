@@ -4,7 +4,6 @@ import { cn } from "@/lib/utils";
 
 export const ShootingStars = ({
   className,
-  starClassName,
   starColor = "#FFFFFF",
   minSpeed = 1.5,
   maxSpeed = 2.5,
@@ -14,6 +13,11 @@ export const ShootingStars = ({
 }) => {
   const canvasRef = useRef(null);
   const [stars, setStars] = useState([]);
+  const starsRef = useRef(stars);
+
+  useEffect(() => {
+    starsRef.current = stars; // Update the ref whenever stars state changes
+  }, [stars]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -35,7 +39,7 @@ export const ShootingStars = ({
     const drawStars = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       ctx.fillStyle = starColor;
-      stars.forEach((star) => {
+      starsRef.current.forEach((star) => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.size, 0, 2 * Math.PI);
         ctx.fill();
@@ -43,7 +47,7 @@ export const ShootingStars = ({
     };
 
     const animate = () => {
-      stars.forEach((star) => {
+      starsRef.current.forEach((star) => {
         star.x -= star.speed;
         if (star.x < 0) {
           star.x = canvas.width;
