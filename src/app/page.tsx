@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { BackgroundBeamsWithCollision } from "@/components/background-beams-with-collision";
+import { MeteorsDemo } from "@/components/bg3";
 import { BackgroundLines } from "@/components/background-lines";
 import TogglePanel from "@/components/toggle-panel";
 
@@ -24,7 +25,7 @@ export default function Home() {
             </button>
           </div>
         </BackgroundBeamsWithCollision>
-      ) : (
+      ) : bg === "bg2" ? (
         <BackgroundLines>
           <div className="relative z-10 flex flex-col items-center justify-center p-4">
             <h1 className="text-4xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center">
@@ -38,6 +39,8 @@ export default function Home() {
             </button>
           </div>
         </BackgroundLines>
+      ) : (
+        <MeteorsDemo />
       )}
     </div>
   );

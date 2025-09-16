@@ -17,6 +17,12 @@ export default function TogglePanel({ setBg }: { setBg: (bg: string) => void }) 
       >
         bg2
       </button>
+      <button
+        onClick={() => setBg('bg3')}
+        className="px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-md text-gray-800 dark:text-gray-200"
+      >
+        bg3
+      </button>
     </div>
   );
 }
