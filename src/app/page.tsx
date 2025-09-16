@@ -4,6 +4,7 @@ import { BackgroundBeamsWithCollision } from "@/components/background-beams-with
 import { MeteorsDemo } from "@/components/bg3";
 import { BackgroundLines } from "@/components/background-lines";
 import TogglePanel from "@/components/toggle-panel";
+import { ShootingStarsAndStarsBackgroundDemo } from "@/components/bg4";
 
 export default function Home() {
   const [bg, setBg] = useState("bg1");
@@ -39,6 +40,10 @@ export default function Home() {
             </button>
           </div>
         </BackgroundLines>
+      ) : bg === "bg3" ? (
+        <MeteorsDemo />
+      ) : bg === "bg4" ? (
+        <ShootingStarsAndStarsBackgroundDemo />
       ) : (
         <MeteorsDemo />
       )}

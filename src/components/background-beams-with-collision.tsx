@@ -16,50 +16,50 @@ export const BackgroundBeamsWithCollision = ({
 
   const beams = [
     {
-      initialX: 10,
-      translateX: 10,
+      initialX: "0.71vw",
+      translateX: "0.71vw",
       duration: 7,
       repeatDelay: 3,
       delay: 2,
     },
     {
-      initialX: 600,
-      translateX: 600,
+      initialX: "42.86vw",
+      translateX: "42.86vw",
       duration: 3,
       repeatDelay: 3,
       delay: 4,
     },
     {
-      initialX: 100,
-      translateX: 100,
+      initialX: "7.14vw",
+      translateX: "7.14vw",
       duration: 7,
       repeatDelay: 7,
       className: "h-6",
     },
     {
-      initialX: 400,
-      translateX: 400,
+      initialX: "28.57vw",
+      translateX: "28.57vw",
       duration: 5,
       repeatDelay: 14,
       delay: 4,
     },
     {
-      initialX: 800,
-      translateX: 800,
+      initialX: "57.14vw",
+      translateX: "57.14vw",
       duration: 11,
       repeatDelay: 2,
       className: "h-20",
     },
     {
-      initialX: 1000,
-      translateX: 1000,
+      initialX: "71.43vw",
+      translateX: "71.43vw",
       duration: 4,
       repeatDelay: 2,
       className: "h-12",
     },
     {
-      initialX: 1200,
-      translateX: 1200,
+      initialX: "85.71vw",
+      translateX: "85.71vw",
       duration: 6,
       repeatDelay: 4,
       delay: 2,
@@ -181,14 +181,14 @@ const CollisionMechanism = React.forwardRef<
         ref={beamRef}
         animate="animate"
         initial={{
-          translateY: beamOptions.initialY || "-200px",
-          translateX: beamOptions.initialX || "0px",
+          translateY: beamOptions.initialY || "-20vh",
+          translateX: beamOptions.initialX || "0vw",
           rotate: beamOptions.rotate || 0,
         }}
         variants={{
           animate: {
-            translateY: beamOptions.translateY || "1800px",
-            translateX: beamOptions.translateX || "0px",
+            translateY: beamOptions.translateY || "180vh",
+            translateX: beamOptions.translateX || "0vw",
             rotate: beamOptions.rotate || 0,
           },
         }}
